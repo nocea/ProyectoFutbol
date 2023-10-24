@@ -1,0 +1,57 @@
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table>
+                    <thead class="thead">
+                        <tr>              
+                          <th scope="col">Nº</th>               
+                          <th scope="col">Equipo</th>              
+                          <th scope="col">PJ</th>                
+                          <th scope="col">G</th>
+                          <th scope="col">E</th>
+                          <th scope="col">P</th>
+                          <th scope="col">GF</th>
+                          <th scope="col">GC</th>
+                          <th scope="col">PT</th>
+                          <th scope="col">DG</th>                
+                        </tr>               
+                      </thead>
+                    <tr *ngFor="let equipos of datos">
+                        <th scope="row">
+                            {{equipos.id_equipo}}
+                        </th>
+                        <td>
+                            {{equipos.nombre}}
+                        </td>
+                        <td>
+                            {{equipos.p_jugados}}
+                        </td>
+                        <td>
+                            {{equipos.p_ganados}}
+                        </td>
+                        <td>
+                            {{equipos.p_empatados}}
+                        </td>
+                        <td>
+                            {{equipos.p_perdidos}}
+                        </td>
+                        <td>
+                            {{equipos.g_favor}}
+                        </td>
+                        <td>
+                            {{equipos.g_contra}}
+                        </td>
+                        <td>
+                            {{equipos.p_ganados*3+equipos.p_empatados}}
+                        </td>
+                        <td>
+                            {{equipos.g_favor-equipos.g_contra}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
