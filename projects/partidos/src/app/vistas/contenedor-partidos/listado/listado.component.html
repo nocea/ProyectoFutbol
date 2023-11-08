@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let partido of partidos">
+        {{partido.equipoLocal}} - {{partido.equipoVisitante}} 
+        <span><i class="bi bi-pencil-square" routerLink='/partidos/detalle/{{partido.id}}'></i></span>
+    </li>
+</ul>

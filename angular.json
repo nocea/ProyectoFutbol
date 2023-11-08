@@ -185,6 +185,42 @@
           }
         }
       }
+    },
+    "equipos-lib": {
+      "projectType": "library",
+      "root": "projects/equipos-lib",
+      "sourceRoot": "projects/equipos-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/equipos-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/equipos-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/equipos-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/equipos-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
